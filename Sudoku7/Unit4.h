@@ -1,0 +1,28 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit4H
+#define Unit4H
+//---------------------------------------------------------------------------
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <StdCtrls.hpp>
+#include <Forms.hpp>
+#include <ExtCtrls.hpp>
+#include <Graphics.hpp>
+//---------------------------------------------------------------------------
+class TLaws_of_the_sudoku : public TForm
+{
+__published:	// IDE-managed Components
+        TImage *Image1;
+        TTimer *Timer1;
+        void __fastcall Timer1Timer(TObject *Sender);
+        void __fastcall FormShow(TObject *Sender);
+        void __fastcall FormHide(TObject *Sender);
+private:	// User declarations
+public:		// User declarations
+        __fastcall TLaws_of_the_sudoku(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TLaws_of_the_sudoku *Laws_of_the_sudoku;
+//---------------------------------------------------------------------------
+#endif

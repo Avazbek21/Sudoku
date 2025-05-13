@@ -1,0 +1,66 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit4.h"
+#include "Unit3.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TLaws_of_the_sudoku *Laws_of_the_sudoku;
+int m=-390;
+//---------------------------------------------------------------------------
+__fastcall TLaws_of_the_sudoku::TLaws_of_the_sudoku(TComponent* Owner)
+        : TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TLaws_of_the_sudoku::Timer1Timer(TObject *Sender)
+{switch(m--)
+{case 375:Image1->Picture->LoadFromFile("cgwg.bmp");break;
+case 360:Image1->Picture->LoadFromFile("bgb.bmp");break;
+case 345:Image1->Picture->LoadFromFile("bluen.bmp");break;
+case 330:Image1->Picture->LoadFromFile("bs.bmp");break;
+case 315:Image1->Picture->LoadFromFile("hgg.bmp");break;
+case 300:Image1->Picture->LoadFromFile("long green hole.bmp");break;
+case 285:Image1->Picture->LoadFromFile("space numbers.bmp");break;
+case 270:Image1->Picture->LoadFromFile("wn.bmp");break;
+case 255:Image1->Picture->LoadFromFile("ywsb.bmp");break;
+case 240:Image1->Picture->LoadFromFile("unnamed.bmp");break;
+case 225:Image1->Picture->LoadFromFile("sudokuscroll.bmp");break;
+case 210:Image1->Picture->LoadFromFile("bbw.bmp");break;
+case 195:Image1->Picture->LoadFromFile("287543.bmp");break;
+case 180:Image1->Picture->LoadFromFile("gwb.bmp");break;
+case 165:Image1->Picture->LoadFromFile("green hole.bmp");break;
+case 150:Image1->Picture->LoadFromFile("rw.bmp");break;
+case 135:Image1->Picture->LoadFromFile("swy.bmp");break;
+case 120:Image1->Picture->LoadFromFile("bg.bmp");break;
+case 105:Image1->Picture->LoadFromFile("galactus.bmp");break;
+case 90:Image1->Picture->LoadFromFile("datad.bmp");break;
+case 75:Image1->Picture->LoadFromFile("sudoku.bmp");break;
+case 60:Image1->Picture->LoadFromFile("wvb.bmp");break;
+case 45:Image1->Picture->LoadFromFile("green_hole.bmp");break;
+case 30:Image1->Picture->LoadFromFile("gwbsh.bmp");break;
+case 15:Image1->Picture->LoadFromFile("bbs.bmp");break;
+case 0:Image1->Picture->LoadFromFile("18962.bmp");break;
+case -15:Image1->Picture->LoadFromFile("Generator.bmp");break;
+case -30:Image1->Picture->LoadFromFile("g.bmp");break;
+case -45:Image1->Picture->LoadFromFile("wbpooo.bmp");break;
+case -60:Image1->Picture->LoadFromFile("cross.bmp");m=390;break;
+}
+}
+//---------------------------------------------------------------------------
+void __fastcall TLaws_of_the_sudoku::FormShow(TObject *Sender)
+{Laws_of_the_sudoku->Left=Sudoku->Left+515;
+Laws_of_the_sudoku->Top=Sudoku->Top;
+Timer1->Enabled=true;
+}
+//---------------------------------------------------------------------------
+void __fastcall TLaws_of_the_sudoku::FormHide(TObject *Sender)
+{
+Timer1->Enabled=false;
+}
+//---------------------------------------------------------------------------
+
